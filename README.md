@@ -22,18 +22,18 @@ const bar = 'bar';
 Use `let` if you will _reassign_ a variable.
 
 ```js
-// GOOD: used let when variable reassigned
+// GOOD: used let when variable will be reassigned
 let foo = 'foo1';
 foo = 'foo2';
 
-// BAD: used let when variable not reassigned
+// BAD: used let when variable will not be reassigned
 let baz = 'baz';
 ```
 
 Use `const` if you don't need to _reassign_ a variable.
 
 ```js
-// GOOD: used const when variable not reassigned
+// GOOD: used const when variable will not be reassigned
 const bar = 'bar';
 
 // BAD: used const when variable reassigned, this will throw an error
@@ -108,6 +108,7 @@ const o = {
 
 console.log(o); // { foo: 'foo1' }
 
+// values within objects can be changed
 o.foo = 'foo2';
 o.bar = 'bar1';
 
